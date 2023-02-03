@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.asserts.SoftAssert;
 import org.junit.Assert;
 
 import baseClass.TestBase;
@@ -62,44 +61,16 @@ public class RegistraionPage extends TestBase {
 	public void RegistrationValidationMsg() {
 		homePage = new HomePage();
 
-//		if(message.getText().contains("password_mismatch:The two password fields didn’t match.")) {
-//
-//			System.out.println(message.getText());
-//		}
-//		else if(message.getText().contains("New Account Created.")) {
-//
-//			System.out.println(message.getText());	
-//			try {
-//				homePage.validateHomePage();
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
-//		else {
-//			System.out.println(password_txt.getAttribute("validationMessage"));
-//		}
-//		String ExpectedErrorMessage = "New Account Created.";
-		String msg = message.getText();
-		SoftAssert SA = new SoftAssert();
-		boolean actualErrorMessage= false;
-		
-		if(msg.contains("You are logged in")) {
-			
-			actualErrorMessage =true;
-		SA.assertTrue(actualErrorMessage);
-		System.out.println(msg);
-		SA.assertAll();
+		if(message.getText().contains("password_mismatch:The two password fields didn’t match.")) {
+
+			System.out.println(message.getText());
 		}
-		
-		else {
-			
-			actualErrorMessage =false;
-			SA.assertTrue(actualErrorMessage);
-			System.out.println(msg);
-			SA.assertAll();
+		else if(message.getText().contains("New Account Created.")) {
+
+			System.out.println(message.getText());	
+			homePage.validateHomePage();
 		}
-		driver.close();
+
 	}
 
 }

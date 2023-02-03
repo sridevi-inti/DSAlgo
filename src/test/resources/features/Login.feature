@@ -1,4 +1,3 @@
-@B
 Feature: Test login Page with dropdown on home page
 
   Background: user is on landing page
@@ -24,5 +23,5 @@ Feature: Test login Page with dropdown on home page
 
     Examples: 
       | username | Password |
-      | gfteuryt | ddfsasda |
+      | gfteuryt | gfhdgety |
       | xyz1234  | kk12kk12 |

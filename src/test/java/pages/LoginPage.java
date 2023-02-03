@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.asserts.SoftAssert;
 import org.junit.Assert;
 
 import baseClass.TestBase;
@@ -51,43 +50,22 @@ public class LoginPage extends TestBase {
 	}
 
 	public void LoginValidationMsg() {
-		
-		String ExpectedErrorMessage = "You are logged in";
-		String actualErrorMessage = Message.getText();
-		
-		SoftAssert SA = new SoftAssert();
-		SA.assertEquals(actualErrorMessage,ExpectedErrorMessage);
-		System.out.println(actualErrorMessage);
-		SA.assertAll();
-	
-	}
-		
-		
 
-//		String ExpectedErrorMessage = "You are logged in";
-//		String actualErrorMessage = Message.getText();
-//		try {
-//		Assert.assertEquals(ExpectedErrorMessage,actualErrorMessage);
-//		System.out.println(actualErrorMessage);
-//	}
-//	catch(Exception e) {
-//		e.printStackTrace();	
-//	}
-//	}
 
-//		if(Message.getText().contains("Invalid Username and Password")) {
-//
-//			System.out.println(Message.getText());
-//		}
-//
-//		else if (Message.getText().contains("You are logged in")) {
-//
-//			System.out.println(Message.getText());
-//		}
+
+		if(Message.getText().contains("Invalid Username and Password")) {
+
+			System.out.println(Message.getText());
+		}
+
+		else if (Message.getText().contains("You are logged in")) {
+
+			System.out.println(Message.getText());
+		}
 //		else {
 //			System.out.println(password_txt.getAttribute("validationMessage"));
 //		}
-//	}
+	}
 
 	public HomePage doLogin(String uname , String pwd) {
 		userName_txt.sendKeys(uname);

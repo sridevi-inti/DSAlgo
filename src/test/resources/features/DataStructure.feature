@@ -1,4 +1,3 @@
-@C
 Feature: Check Data Structures
 
   Background: 

@@ -92,8 +92,8 @@ DSIGetStrtd_btn.click();
 	}
 
 
-	public void validateHomePage() throws InterruptedException {
-	
+	public void validateHomePage() {
+
 		String title = driver.getTitle();
 		Assert.assertEquals("NumpyNinja", title);
 		System.out.println("user is on " + title + " home page");

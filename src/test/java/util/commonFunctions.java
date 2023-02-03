@@ -16,5 +16,5 @@ public class commonFunctions extends TestBase{
 		driver.navigate().back();
 		driver.navigate().back();
 	}
-	
+
 }

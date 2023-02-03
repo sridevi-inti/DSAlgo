@@ -45,12 +45,7 @@ public class DataStructureSD extends TestBase{
 
 	@Given("user is on home Page")
 	public void user_is_on_home_page() {
-		try {
-			homePage.validateHomePage();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		homePage.validateHomePage();
 	}
 
 	@When("user clicks on DataStructuresIntro get started button")
@@ -405,12 +400,7 @@ public class DataStructureSD extends TestBase{
 	public void user_navigate_back_to_home_page() {
 		cf.returnBackPage();
 
-		try {
-			homePage.validateHomePage();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		homePage.validateHomePage();
 	}
 
 	@Then("user clicks on Tree GetStarted button")

@@ -1,4 +1,3 @@
-@A
 Feature: Test Registration Page
 
   Scenario Outline: check registration functionality
@@ -13,5 +12,5 @@ Feature: Test Registration Page
 
     Examples: 
       | username | password  | passwordConfm |
-      | hjk6789  | erteerter | kk12kk12      |
-      | tl7ukl5  | kk12kk12  | kk12kk12      |
+      | hjk6789  | dasdsaasd | kk12kk12      |
+      | tf29424  | kk12kk12  | kk12kk12      |

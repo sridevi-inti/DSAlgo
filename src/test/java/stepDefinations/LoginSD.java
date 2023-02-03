@@ -14,12 +14,7 @@ public class LoginSD extends TestBase{
 	
 	@Then("The user should see 6 panels with different structures")
 	public void the_user_should_see_panels_with_different_structures() {		
-		try {
-			homePage.validateHomePage();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		homePage.validateHomePage();
 	}
 
 	@When("user clicks DataStructures dropdown")
@@ -69,12 +64,6 @@ public class LoginSD extends TestBase{
 	
 	@Then("if login is sucessful user should be redirected to homepage or error message should display")
 	public void if_login_is_sucessful_user_should_be_redirected_to_homepage_or_error_message_should_display() {
-//		try {
-//			homePage.validateHomePage();
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 		login.LoginValidationMsg();
 		driver.close();
 	}
